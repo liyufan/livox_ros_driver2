@@ -68,7 +68,7 @@ source /opt/ros/foxy/setup.sh
 ./build.sh ROS2
 ```
 
-#### For ROS2 Humble:
+#### For ROS2 Humble / Jazzy:
 ```shell
 source /opt/ros/humble/setup.sh
 ./build.sh humble
@@ -189,7 +189,7 @@ LiDAR Configurations (such as ip, port, data type... etc.) can be set via a json
 
 1. Follow is a configuration example for HAP LiDAR (located in config/HAP_config.json):
 
-```json
+```jsonc
 {
   "lidar_summary_info" : {
     "lidar_type": 8  # protocol type index, please don't revise this value
@@ -252,7 +252,7 @@ For more infomation about the HAP config, please refer to:
 
 2. When connecting multiple LiDARs, add objects corresponding to different LiDARs to the "lidar_configs" array. Examples of mixed-LiDARs config file contents are as follows :
 
-```json
+```jsonc
 {
   "lidar_summary_info" : {
     "lidar_type": 8  # protocol type index, please don't revise this value
@@ -333,7 +333,7 @@ For more infomation about the HAP config, please refer to:
 3. when multiple nics on the host connect to multiple LiDARs, you need to add objects corresponding to different LiDARs to the lidar_configs array. Run different luanch files separately, and the following is an example of mixing lidar configuration file contents:
 
 **MID360_config1:**
-```json
+```jsonc
 {
   "lidar_summary_info" : {
     "lidar_type": 8  # protocol type index，please don't revise this value
@@ -376,7 +376,7 @@ For more infomation about the HAP config, please refer to:
 }
 ```
 **MID360_config2:**
-```json
+```jsonc
 {
   "lidar_summary_info" : {
     "lidar_type": 8  # protocol type index，please don't revise this value
